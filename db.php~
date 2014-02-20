@@ -1,0 +1,31 @@
+<? header('Content-type: text/html; charset=utf-8');?>
+<?
+
+$dbconn = pg_connect("host=ec2-54-204-41-178.compute-1.amazonaws.com port=5432 dbname=dcm98av0invfl 
+user=wkfdugcnnqaobc
+password=4GVSrTvAi_j5qCMj5Qf882O3aM sslmode=require 
+options='--client_encoding=UTF8'") 
+or die('Could not connect: ' . pg_last_error());
+
+$bs = pg_connection_busy($dbconn);
+  if ($bs) {
+      echo 'connection is busy';
+  } else {
+     echo 'connection is not busy';
+  }
+
+
+
+
+
+
+echo "<br>"l
+
+
+
+$dbconn = pg_connect("host=ec2-54-204-41-178.compute-1.amazonaws.com 
+port=5432 dbname=dcm98av0invfl")
+   or die("NO CONNECT TO DB");
+echo "SUCCSESS !";
+pg_close($dbconn);
+?>
